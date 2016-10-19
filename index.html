@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>JAM</title>
-	<!-- LIBS -->
-	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-	
-	<!-- APP -->
-	<script type="text/javascript" src="app/app.js"></script>
-</head>
-<body ng-app="Jam">
+<html ng-app="Jam">
+	<head>
+		<title>JAM</title>
+		<base href="/">
+		<!-- LIBS -->
+		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-touch/angular-touch.min.js"></script>
+		<script type="text/javascript" src="assets/js/bootstrap-ui/ui-bootstrap-tpls-2.2.0.min.js"></script>
 
-</body>
+		
+		<!-- APP -->
+		<script type="text/javascript" src="app/app.js"></script>
+		<script type="text/javascript" src="app/app.routes.js"></script>
+
+		<!-- PAGES -->
+		<script type="text/javascript" src="pages/home/controller.js"></script>
+		<script type="text/javascript" src="pages/signup/controller.js"></script>
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap/bootstrap-theme.css" />
+	</head>
+	<body>
+		<div ng-view></div>
+	</body>
 </html>

@@ -1,2 +1,2 @@
 'use strict'
-angular.module("Jam", []);
+angular.module("Jam", ['ngRoute']);
