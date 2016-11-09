@@ -1,10 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	HOME
-	<a href="#signup">Sign up!</a>
-</body>
-</html>
+<div class="row" ng-controller="HomeController">
+	<div class="col-md-3">
+		<p class="lead">Filtros</p>
+		<div class="list-group">
+			<a href="#" class="list-group-item">La Plata</a>
+			<a href="#" class="list-group-item">Taxiboys treintañeros</a>
+			<a href="#" class="list-group-item">Menor precio</a>
+		</div>
+	</div>
+	<div class="col-md-9">
+		<form name="search" class="form-inline" style="padding: 5px">
+			<div class="form-group">
+			    <label for="exampleInputEmail3">Qué estás buscando?</label>
+			    <input type="email" class="form-control " id="exampleInputEmail3" ng-model="searchText">
+			</div>
+			<button type="submit" class="btn btn-default">Buscar</button>
+		</form>
+		<div class="row thumbnail"  ng-repeat="worker in workers">
+			<div class="col-md-3">
+	            <img src="{{worker.profilePhoto}}" alt="" >
+	        </div>
+	        <div class="col-md-9">    
+	            <div class="caption">
+	                <h4><a href="">{{worker.name}}</a>
+	                </h4>
+	                <p>{{worker.description}}</p>
+	            </div>
+	            <div class="ratings">
+	                <p class="pull-right">15 reviews</p>
+	                <p>
+	                    <span class="glyphicon glyphicon-star"></span>
+	                    <span class="glyphicon glyphicon-star"></span>
+	                    <span class="glyphicon glyphicon-star"></span>
+	                    <span class="glyphicon glyphicon-star"></span>
+	                    <span class="glyphicon glyphicon-star"></span>
+	                </p>
+	            </div>
+	        </div>
+            
+	    </div>
+	</div>
+</div>
